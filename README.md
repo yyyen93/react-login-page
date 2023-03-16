@@ -2,69 +2,42 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## NPM API INSTALLED
 
-In the project directory, you can run:
+1. styled-components - <https://www.npmjs.com/package/styled-components> : use to style the app components.
+2. react-router-dom - <https://www.npmjs.com/package/react-router-dom> :To facilitate movement between our pages.
+3. formik - <https://www.npmjs.com/package/formik> : use to build forms
+4. react-icons - <https://react-icons.github.io/react-icons/> : icons for login input field.
 
-### `npm start`
+### Steps
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Styles.js (All styles components)
+    a. import styled-components - style the app
+    b. import react-router-dom - to create button
+2. All image in assets.
+3. App.js
+    a. import StyledContainer from components Styles.js
+        i. styled components : Not default export. we need to wrap with curly braces.
+    b.  wrap whole app in a router that comes from react-router-dom
+4. Home.js
+    a. import StyledTitle,StyledSubTitle, Avatar, StyledButton, ButtonGroup from components Styles.js
+        i.  Avatar is the background image.
+    b. import Logo from assets
+    c. import StyledButton from Styles.js
+        i.  create a button for login and sign up
+        ii. specify the links where buttons point 'to'
+5. Login.js
+    a. use formik to build form.
+        i. Formik tag will take function as a child, and this contain our form
+        ii. The form must ensure usability & high level of abstraction, we want to put formik input in another file.
+        iii. The file name 'FormLib.js'
+            i. formik uses 'useField' which comes from itself package.
+            ii.{...props} : take props as parameter
+            iii. using the props will set up a formik field
+            iv. field and meta variable contains information about the field.
+            v. import 'StyledIcon' from Styles.js
+            vi. Code Eye icon for the password field.
+    b. import StyledTextInput,StyledLabel,StyledFormArea,StyledFormButton,Avatar,StyledTitle,colors,ButtonGroup from Styles.js
+    c. import Logo from Assets
+    d. import react icons that supply to the input field.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
