@@ -4,12 +4,24 @@ Here’s an example website.
 
 ## NPM API INSTALLED
 
-1. styled-components - <https://www.npmjs.com/package/styled-components> : use to style the app components.
-2. react-router-dom - <https://www.npmjs.com/package/react-router-dom> :To facilitate movement between our pages.
-3. formik - <https://www.npmjs.com/package/formik> : use to build forms
-4. react-icons - <https://react-icons.github.io/react-icons/> : icons for login input field.
-5. yup - <https://www.npmjs.com/package/yup> : Validation input field. yap will give all the tools that we need to properly validate our input and also set the apropraite error.
-6. react-loader-spinner - <https://mhnpd.github.io/react-loader-spinner/docs/components/rotating-lines> : loader spiner CSS for the form.
+1. __styled-components__ :
+    * <https://www.npmjs.com/package/styled-components>
+    * use to style the app components.
+2. __react-router-dom__ :
+    * <https://www.npmjs.com/package/react-router-dom> 
+    * To facilitate movement between our pages.
+3. __formik__ :
+   * <https://www.npmjs.com/package/formik> 
+   * use to build forms
+4. __react-icons__ :
+   * <https://react-icons.github.io/react-icons/> 
+   * icons for login input field.
+5. __yup__ :
+   * <https://www.npmjs.com/package/yup> 
+   * Validation input field. yap will give all the tools that we need to properly validate our input and also set the appropriate error.
+6. __react-loader-spinner__ :
+   * <https://mhnpd.github.io/react-loader-spinner/docs/components/rotating-lines> 
+   * loader spinner CSS for the form.
 
 ### Steps
 
