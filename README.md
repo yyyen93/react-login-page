@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Project : React pages
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Here’s an example website.
 
 ## NPM API INSTALLED
 
@@ -13,23 +13,23 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Steps
 
-1. Styles.js (All styles components)
+1. __Styles.js (All styles components)__
    1. import styled-components - style the app
    2. import react-router-dom - to create button
 
-2. All image in assets.
-3. App.js
+2. __All image in assets.__
+3. __App.js__
     1. import StyledContainer from components Styles.js
         i. styled components : Not default export. we need to wrap with curly braces.
     2. wrap whole app in a router that comes from react-router-dom
-4. Home.js
+4. __Home.js__
     1. import StyledTitle,StyledSubTitle, Avatar, StyledButton, ButtonGroup from components Styles.js
         1. Avatar is the background image.
     2. import Logo from assets
     3. import StyledButton from Styles.js
         1. create a button for login and sign up
         2. specify the links where buttons point 'to'
-5. Login.js
+5. __Login.js__
     1. use formik to build form.
         1. Formik tag will take function as a child, and this contain our form
         2. The form must ensure usability & high level of abstraction, we want to put formik input in another file.
@@ -53,5 +53,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     5. import all from yup
     6. import CopyrightText from Styles.js
     7. import ButtonGroup to style submit button
-6. Signup.js
+6. __Signup.js__
     1. Similar to Login.js, just add extra
