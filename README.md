@@ -14,8 +14,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Steps
 
 1. Styles.js (All styles components)
-    ..1. import styled-components - style the app
-    ..2. import react-router-dom - to create button
+   1. import styled-components - style the app
+   2. import react-router-dom - to create button
 
 2. All image in assets.
 3. App.js
