@@ -16,6 +16,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 1. Styles.js (All styles components)
     a. import styled-components - style the app
     b. import react-router-dom - to create button
+
 2. All image in assets.
 3. App.js
     a. import StyledContainer from components Styles.js
@@ -52,5 +53,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     e. import all from yup
     f. import CopyrightText from Styles.js
     g. import ButtonGroup to style submit button
-
-
+6. Signup.js
+    a. Similar to Login.js, just add extra

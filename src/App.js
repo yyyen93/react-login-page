@@ -1,6 +1,7 @@
 //Pages
-// import Home from './pages/Home';
+import Home from './pages/Home';
 import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 //styled components : Not default export. we need to wrap with curly braces.
 import {StyledContainer} from './components/Styles';
@@ -13,7 +14,7 @@ function App() {
   return (
     <Router>
       <StyledContainer>
-          <Login />
+          <Signup />
       </StyledContainer>
     </Router>
   );
