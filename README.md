@@ -22,6 +22,7 @@ Here’s an example website.
 6. __react-loader-spinner__ :
    * <https://mhnpd.github.io/react-loader-spinner/docs/components/rotating-lines> 
    * loader spinner CSS for the form.
+`___`
 
 ### Steps
 
