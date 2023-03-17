@@ -19,39 +19,39 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 2. All image in assets.
 3. App.js
-    a. import StyledContainer from components Styles.js
+    1. import StyledContainer from components Styles.js
         i. styled components : Not default export. we need to wrap with curly braces.
-    b.  wrap whole app in a router that comes from react-router-dom
+    2. wrap whole app in a router that comes from react-router-dom
 4. Home.js
-    a. import StyledTitle,StyledSubTitle, Avatar, StyledButton, ButtonGroup from components Styles.js
-        i.  Avatar is the background image.
-    b. import Logo from assets
-    c. import StyledButton from Styles.js
-        i.  create a button for login and sign up
-        ii. specify the links where buttons point 'to'
+    1. import StyledTitle,StyledSubTitle, Avatar, StyledButton, ButtonGroup from components Styles.js
+        1. Avatar is the background image.
+    2. import Logo from assets
+    3. import StyledButton from Styles.js
+        1. create a button for login and sign up
+        2. specify the links where buttons point 'to'
 5. Login.js
-    a. use formik to build form.
-        i. Formik tag will take function as a child, and this contain our form
-        ii. The form must ensure usability & high level of abstraction, we want to put formik input in another file.
-        iii. The file name 'FormLib.js'
+    1. use formik to build form.
+        1. Formik tag will take function as a child, and this contain our form
+        2. The form must ensure usability & high level of abstraction, we want to put formik input in another file.
+        3. The file name 'FormLib.js'
             i. formik uses 'useField' which comes from itself package.
             ii.{...props} : take props as parameter
             iii. using the props will set up a formik field
             iv. field and meta variable contains information about the field.
             v. import 'StyledIcon' from Styles.js
             vi. Code Eye icon for the password field.
-        iv. formik property which is 'submitter'
+        4. formik property which is 'submitter'
             i. this returns a boolean true or false to indicate when our form is submitted.
             ii. using this we can know when to display our loader spinner.
             iii. isSubmitting as a parameter.
             iv.  import react-loader-spinner CSS.
                 1. import {RotatingLines} from 'react-loader-spinner';
-    b. import StyledTextInput,StyledLabel,StyledFormArea,StyledFormButton,Avatar,StyledTitle,colors,ButtonGroup from Styles.js
-    c. import Logo from Assets
-    d. import react icons that supply to the input field.
+    2. import StyledTextInput,StyledLabel,StyledFormArea,StyledFormButton,Avatar,StyledTitle,colors,ButtonGroup from Styles.js
+    3. import Logo from Assets
+    4. import react icons that supply to the input field.
         i. FiMaril and FiLock from react-icons/fi
-    e. import all from yup
-    f. import CopyrightText from Styles.js
-    g. import ButtonGroup to style submit button
+    5. import all from yup
+    6. import CopyrightText from Styles.js
+    7. import ButtonGroup to style submit button
 6. Signup.js
-    a. Similar to Login.js, just add extra
+    1. Similar to Login.js, just add extra
