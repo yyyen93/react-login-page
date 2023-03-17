@@ -34,22 +34,22 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
         1. Formik tag will take function as a child, and this contain our form
         2. The form must ensure usability & high level of abstraction, we want to put formik input in another file.
         3. The file name 'FormLib.js'
-            i. formik uses 'useField' which comes from itself package.
-            ii.{...props} : take props as parameter
-            iii. using the props will set up a formik field
-            iv. field and meta variable contains information about the field.
-            v. import 'StyledIcon' from Styles.js
-            vi. Code Eye icon for the password field.
+            1. formik uses 'useField' which comes from itself package.
+            2. {...props} : take props as parameter
+            3. using the props will set up a formik field
+            4. field and meta variable contains information about the field.
+            5. import 'StyledIcon' from Styles.js
+            6. Code Eye icon for the password field.
         4. formik property which is 'submitter'
-            i. this returns a boolean true or false to indicate when our form is submitted.
-            ii. using this we can know when to display our loader spinner.
-            iii. isSubmitting as a parameter.
-            iv.  import react-loader-spinner CSS.
+            1. this returns a boolean true or false to indicate when our form is submitted.
+            2. using this we can know when to display our loader spinner.
+            3. isSubmitting as a parameter.
+            4. import react-loader-spinner CSS.
                 1. import {RotatingLines} from 'react-loader-spinner';
     2. import StyledTextInput,StyledLabel,StyledFormArea,StyledFormButton,Avatar,StyledTitle,colors,ButtonGroup from Styles.js
     3. import Logo from Assets
     4. import react icons that supply to the input field.
-        i. FiMaril and FiLock from react-icons/fi
+        1. FiMail and FiLock from react-icons/fi
     5. import all from yup
     6. import CopyrightText from Styles.js
     7. import ButtonGroup to style submit button
