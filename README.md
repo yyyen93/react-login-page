@@ -20,8 +20,19 @@ Here’s an example website.
    * <https://www.npmjs.com/package/yup> 
    * Validation input field. yap will give all the tools that we need to properly validate our input and also set the appropriate error.
 6. __react-loader-spinner__ :
-   * <https://mhnpd.github.io/react-loader-spinner/docs/components/rotating-lines> 
+   * <https://mhnpd.github.io/react-loader-spinner/docs/components/rotating-lines>
    * loader spinner CSS for the form.
+7. __redux__ :
+   * <https://redux.js.org/introduction/getting-started>
+8. __react-redux__ :
+   * <https://www.npmjs.com/package/react-redux>
+   * Official React bindings for Redux.
+9. __redux-thunk__ :
+    * <https://www.npmjs.com/package/redux-thunk>
+    * Thunk middleware for Redux. It allows writing functions with logic inside that can interact with a Redux store's dispatch and getState methods.
+10. __redux-react-session__ :
+    * <https://www.npmjs.com/package/redux-react-session>
+    * Redux React Session provides an API that allows to manage sessions through the app, with authorization function for react-router and a persisted session.
 
 ### Steps
 
@@ -34,6 +45,10 @@ Here’s an example website.
     1. import StyledContainer from components Styles.js
         i. styled components : Not default export. we need to wrap with curly braces.
     2. wrap whole app in a router that comes from react-router-dom
+    3. Set Route for each component so that we don't need to replace each time we want to see the output.
+       * to do this, we make use of the Routes and also the Route.
+       * the Routes will check for the current link and choose which component to display.
+       * Each of the Route will take a path which it associates with our components and also the element props, we can pass a dynamic value to element. dynamic value is that to be rendered component as JSX.
 4. __Home.js__
     1. import StyledTitle,StyledSubTitle, Avatar, StyledButton, ButtonGroup from components Styles.js
         1. Avatar is the background image.
@@ -67,3 +82,21 @@ Here’s an example website.
     7. import ButtonGroup to style submit button
 6. __Signup.js__
     1. Similar to Login.js, just add extra
+7. __Dashboard.js__
+
+### Authentication
+  
+1. Require reacts and redux packages. Npm install them.
+    * redux
+    * react-redux
+    * redux-thunk
+    * redux-react-session (Error), try npm install redux-react-session --legacy-peer-deps
+    * @reduxjs/toolkit
+2. Create folder 'auth'
+    * store.js
+      * it contains the boilerplate for redux. All are required.
+      * Please take note for the sessionService. As it no longer maintains. So it currently installed as '--legacy-peer-deps'
+    * Subfolder actions and userActions.js
+    * Subfolder reducers and rootReducer.js
+      * Concepts of reducer is to interact with our store and change up values whenever it's needed.
+3. 
