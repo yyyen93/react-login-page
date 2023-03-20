@@ -97,6 +97,36 @@ Here’s an example website.
       * it contains the boilerplate for redux. All are required.
       * Please take note for the sessionService. As it no longer maintains. So it currently installed as '--legacy-peer-deps'
     * Subfolder actions and userActions.js
+      1. create functions which will take form input details and work on them such as communicating with the backend. These functions are called action in redux.
+      2. Accept various parameters.
+         1. loginUser : take in the values as credentials, history, setFieldError, setSubmitting
     * Subfolder reducers and rootReducer.js
-      * Concepts of reducer is to interact with our store and change up values whenever it's needed.
-3. 
+      3. Concepts of reducer is to interact with our store and change up values whenever it's needed.
+      4. Error:
+        * Uncaught Error: "reducer" is a required argument, and must be a function or an object of functions that can be passed to combineReducers
+        * Solution: Make sure the reducer:rootReducer is declared as an object in configureStore.
+3. index.js
+   1. Provide access to the store.
+    * import {Provider} from 'react-redux';
+      * ensure that our app and all its components can have access to the details in our redux store
+    * import store from './auth/store';
+      * import our store and pass it as a property
+4. Login.js
+   1. Connect login component to the redux store and also import our login action.
+    * import {connect} from 'react-redux';
+    * import {loginUser} from './../auth/actions/userActions';
+    * import {useHistory} from 'react-router-dom';
+      * Now on the successful signing or signup, you might want to move to a new page. Be in its dashboard or another page to be able to move. To able to move around successfully, we need to have information about our history and we will ge to this using the 'history hook' from react.
+    * Connect login component to redux at the bottom where we export it. Connect is a high order function so we call the connect function which returns another function and we pass our login to it. From this component, we pass null and an object of our actions to our connect function.
+      * export default connect(null, {loginUser})(Login);
+    * Since redux assigns the action to our props, lets take in the login user action into our login component. so we can use.
+      * const Login = ({loginUser}) =>{}
+    * Inside the onSubmit property,we want to use the login user action.
+      * Firstly, pass in the value
+      * Secondly, pass in the history. So create the history variable using our useHistory hook
+        * const history = useHistory();
+      * Thirdly, when error message return, we want to display it to the user. To do that, we need to use 'setFieldError' provided by formik. Once we use it, we need to add it to the parameters of our onSubmit function.
+      * Lastly, pass the setSubmitting function to our loginUser.
+      * Once again, this will ensure that we can tell from it when we're done submitting the form.
+      * Do the above samething to Signup.js
+

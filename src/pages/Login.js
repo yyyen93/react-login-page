@@ -30,10 +30,16 @@ import {FiMail, FiLock} from 'react-icons/fi';
 // React loader spinner CSS : RotatingLines
 import {RotatingLines} from 'react-loader-spinner';
 
+//(Authentication) Auth & redux : to dispatch the login action 
+import {connect} from 'react-redux';
+import {loginUser} from './../auth/actions/userActions';
+import {useHistory} from 'react-router-dom';
 
+//Since redux assigns the action to our props, lets take in the login user action into our login component. so we can use
+const Login = ({loginUser}) =>{
+    //(Authentication)create the history variable using our useHistory hook 
+    const history = useHistory();
 
-
-const Login = () =>{
     return(
         <div>
             <StyledFormArea>
@@ -56,8 +62,10 @@ const Login = () =>{
                             password: Yup.string().min(8,"Password is too short").max(30,"Password is too long").required("Required"),
                         })
                     }
-                    onSubmit={(values , {setSubmitting})=> {
+                    onSubmit={(values , {setSubmitting, setFieldError})=> {
                         console.log(values)
+                         //(Authentication)  We want to use the login user action
+                        loginUser(values,history, setFieldError, setSubmitting);
                     }
                 }>
                     {({isSubmitting}) => (
@@ -121,7 +129,7 @@ const Login = () =>{
         </div>
     )
 }
-export default Login;
+export default connect(null, {loginUser})(Login); //(Authentication)
 
 /**
  * Q : above error occurred in the <Formik> component:

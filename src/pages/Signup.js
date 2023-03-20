@@ -31,9 +31,15 @@ import {FiMail, FiLock, FiUser, FiCalendar} from 'react-icons/fi';
 import {RotatingLines} from 'react-loader-spinner';
 
 
+//(Authentication) Auth & redux : to dispatch the login action 
+import {connect} from 'react-redux';
+import {signupUser} from './../auth/actions/userActions';
+import {useHistory} from 'react-router-dom';
 
 
-const Signup = () =>{
+const Signup = ({signupUser}) =>{
+    const history = useHistory();
+
     return(
         <div>
             <StyledFormArea>
@@ -64,8 +70,9 @@ const Signup = () =>{
                             // formik property 'oneOf()' : to check repeatPassword match the original password. We pass an array to it and put in our password field as a reference, so now the value of our repeatPassword should be at least equal to the referrenced password for it to be accepted. Otherwise, would return error message.
                         })
                     }
-                    onSubmit={(values , {setSubmitting})=> {
+                    onSubmit={(values , {setSubmitting, setFieldError})=> {
                         console.log(values)
+                        signupUser(values,history, setFieldError, setSubmitting);
                     }
                 }>
                     {({isSubmitting}) => (
@@ -149,7 +156,7 @@ const Signup = () =>{
         </div>
     )
 }
-export default Signup;
+export default connect(null, {signupUser})(Signup);
 
 /**
  * Q : above error occurred in the <Formik> component:
